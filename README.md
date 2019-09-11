@@ -12,6 +12,26 @@ Terminal of choice:
 Custom Aliases:  
 ```
  touch ~/.bash_aliases  `
- printf "\nalias st=\"status\"\n" >> ~/.bash_aliases 
+ printf "\nalias git st=\"git status\"\n" >> ~/.bash_aliases 
  printf "\nsource ~/.bash_aliases\n" >> ~/.bashrc
+```
+
+Git Setup:  
+If setting up an SSH key to add to my github account, follow the steps (here)[https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent].  
+
+Then:  
+```
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global alias.co checkout
+git config --global push.default simple
+```
+```
+read -p "Enter Your Git Email: "  email
+git config --global user.email "$email"
+```
+```
+read -p "Enter Your Full Name: "  name
+git config --global user.name "name"
 ```
