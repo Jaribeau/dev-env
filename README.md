@@ -11,13 +11,13 @@ Terminal of choice:
 
 Custom Aliases:  
 ```
- touch ~/.bash_aliases  `
- printf "\nalias git st=\"git status\"\n" >> ~/.bash_aliases 
- printf "\nsource ~/.bash_aliases\n" >> ~/.bashrc
+touch ~/.bash_aliases  `
+printf "\nalias git st=\"git status\"\n" >> ~/.bash_aliases 
+printf "\nsource ~/.bash_aliases\n" >> ~/.bashrc
 ```
 
 Git Setup:  
-If setting up an SSH key to add to my github account, follow the steps (here)[https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent].  
+If setting up an SSH key to add to my github account, follow the steps [here](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).  
 
 Then:  
 ```
@@ -35,3 +35,13 @@ git config --global user.email "$email"
 read -p "Enter Your Full Name: "  name
 git config --global user.name "name"
 ```
+
+Change terminal profile during SSH:  
+```
+wget -qO - http://archive.philippheckel.com/apt/Release.key | sudo apt-key add -
+sudo sh -c "echo deb http://archive.philippheckel.com/apt/release/ release main > /etc/apt/sources.list.d/archive.philippheckel.com.list"
+sudo apt-get update
+sudo apt-get install terminator-hostwatch
+```
+Then add profiles that match the hostnames as desired. I.e. if I'm SSHing to `user@host`, I would add a profile named `host`.
+More info [here](https://github.com/GratefulTony/TerminatorHostWatch).  
