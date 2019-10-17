@@ -50,8 +50,16 @@ More info [here](https://github.com/GratefulTony/TerminatorHostWatch).
 
 ### rEFInd on Mac
 A "boot coup" is when the Mac overwrites my custom boot settings. Resetting the NVRAM does this. OS updates sometimes do this.
-The fix is to use the `bless` command from the Mac, as outlined in [these instructions](https://www.rodsbooks.com/refind/bootcoup.html#osx).  
+To fix this, boot into Linux via live USB. Check if the efi entry has been demoted or deleted using `efibootmgr`. If it's there, change the order to get back in business.
 
-And, becuase Apple unfortunately doesn't build things to be superuser friendly, SIP must be disabled for that to work. See [here](https://www.rodsbooks.com/refind/sip.html).  
+If not, do roughly the following to add an entry:
+```
+sudo mkdir /boot/efi
+sudo mount /dev/sda1/ /boot/efi
+efibootmgr -c -l \\EFI\\refind\\refind_x64.efi -L rEFInd
+```
+Time saver tip: it's probable that the 'hidden entry' preferences in rEFInd will have been lost - so renaming the `/refind/themes/` folder to temporarily disable it can be useful.
+
+More info [here](https://www.rodsbooks.com/refind/installing.html#linux).
 
 
