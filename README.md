@@ -45,3 +45,9 @@ sudo apt-get install terminator-hostwatch
 ```
 Then add profiles that match the hostnames as desired. I.e. if I'm SSHing to `user@host`, I would add a profile named `host`.
 More info [here](https://github.com/GratefulTony/TerminatorHostWatch).  
+
+
+
+### rEFInd on Mac
+A "boot coup" is when the Mac overwrites my custom boot settings. Resetting the NVRAM does this. OS updates sometimes do this.
+The fix is to use the `bless` command from the Mac, as outlined in [these instructions](https://www.rodsbooks.com/refind/bootcoup.html#osx).  
