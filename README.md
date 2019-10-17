@@ -51,3 +51,7 @@ More info [here](https://github.com/GratefulTony/TerminatorHostWatch).
 ### rEFInd on Mac
 A "boot coup" is when the Mac overwrites my custom boot settings. Resetting the NVRAM does this. OS updates sometimes do this.
 The fix is to use the `bless` command from the Mac, as outlined in [these instructions](https://www.rodsbooks.com/refind/bootcoup.html#osx).  
+
+And, becuase Apple unfortunately doesn't build things to be superuser friendly, SIP must be disabled for that to work. See [here](https://www.rodsbooks.com/refind/sip.html).  
+
+
