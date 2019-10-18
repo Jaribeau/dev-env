@@ -1,5 +1,5 @@
 # dev-env
-A place to keep my dev environment preferences and setups to unify the experience across devices.
+A place to keep my dev environment preferences and setups to unify the experience across devices. This is intended to be a rolling reference for things that I've got dialed or had to take time to figure out. Some of thiese are specific to linux, some are more generic.
 
 ## Intro
 If it's worth it I'll put that which can easily be scripted into a script. For now I just want to compile the must-have pieces of my setup.
@@ -62,4 +62,6 @@ Time saver tip: it's probable that the 'hidden entry' preferences in rEFInd will
 
 More info [here](https://www.rodsbooks.com/refind/installing.html#linux).
 
+### Ubuntu Keyboard Settings on Mac
+Under `Tweak Tool` > `Typing`: Alt/Win key behavior should be `Ctrl is mapped to Win keys (and the usual alt keys)`
 
