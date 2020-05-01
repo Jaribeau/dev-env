@@ -55,7 +55,7 @@ To fix this, boot into Linux via live USB. Check if the efi entry has been demot
 If not, do roughly the following to add an entry:
 ```
 sudo mkdir /boot/efi
-sudo mount /dev/sda1/ /boot/efi
+sudo mount /dev/sda1 /boot/efi
 efibootmgr -c -l \\EFI\\refind\\refind_x64.efi -L rEFInd
 ```
 Time saver tip: it's probable that the 'hidden entry' preferences in rEFInd will have been lost - so renaming the `/refind/themes/` folder to temporarily disable it can be useful.
