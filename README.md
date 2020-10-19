@@ -50,7 +50,7 @@ More info [here](https://github.com/GratefulTony/TerminatorHostWatch).
 
 ### rEFInd on Mac - Fixing a Boot Coup
 A "boot coup" is when the Mac overwrites my custom boot settings. Resetting the NVRAM does this. OS updates sometimes do this.
-To fix this, boot into **Linux** via live USB. Check if the efi entry has been demoted or deleted using `efibootmgr`. If it's there, change the order to get back in business.
+To fix this, boot into **Linux** via live USB. Check if the efi entry has been demoted or deleted using `efibootmgr`. If it's there, change the order to get back in business using i.e. `sudo efibootmgr -o 3,80,2,1`, where the numbers are the Boot#### of each entry.
 
 If not, do roughly the following to add an entry:
 ```
